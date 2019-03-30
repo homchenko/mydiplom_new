@@ -12,5 +12,5 @@
 */
 
 Route::get('/', 'HomeController@index')->name('main.page');
-Route::get('/catalog', 'HomeController@catalog')->name('catalog.page');
+Route::get('/catalog', 'CatalogController@catalog')->name('catalog.page');
 //Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
