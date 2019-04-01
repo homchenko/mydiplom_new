@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('main.page');
+Route::get('/', 'ProductController@index')->name('main.page');
 Route::get('/catalog', 'CatalogController@catalog')->name('catalog.page');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
 //Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');

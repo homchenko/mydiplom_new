@@ -41,7 +41,7 @@
                 </form>
               </li>
               <li class="user-nav__item user-login">
-                <a href="#">
+                <a href="{{route('home')}}">
                   <svg class="user-login__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
                   Вход
                 </a>
@@ -64,8 +64,8 @@
 
         <main class="main-content">
           <ul class="breadcrumbs">
-            <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
-            <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
+            <li class="breadcrumbs__item"><a href="{{route('main.page')}}">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="{{route('catalog.page')}}">Каталог</a></li>
             <li class="breadcrumbs__item"><a>Сливочное</a></li>
           </ul>
           <h1 class="main-title">Сливочное мороженое</h1>

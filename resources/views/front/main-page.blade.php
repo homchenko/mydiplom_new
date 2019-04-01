@@ -19,7 +19,7 @@
                 <div class="site-nav__submenu-container">
                   <ul class="site-nav__submenu">
                     <li class="site-nav__submenu-item site-nav__submenu-item--special"><a href="#">Новинки</a></li>
-                    <li class="site-nav__submenu-item"><a href="catalog.html">Сливочное</a></li>
+                    <li class="site-nav__submenu-item"><a href="#">Сливочное</a></li>
                     <li class="site-nav__submenu-item"><a href="#">Щербеты</a></li>
                     <li class="site-nav__submenu-item"><a href="#">Фруктовый лед</a></li>
                     <li class="site-nav__submenu-item"><a href="#">Мелорин</a></li>
@@ -43,7 +43,7 @@
                 </form>
               </li>
               <li class="user-nav__item user-login">
-                <a href="#">
+                <a href="{{route('home')}}">
                   <svg class="user-login__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
                   Вход
                 </a>

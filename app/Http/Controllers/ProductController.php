@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Product;
 
 class ProductController extends Controller
 {
@@ -13,7 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        $products = Product::where('is_active', 1)->limit(4)->get();
+        return view('front.main-page', compact('products', 'categories'));
     }
 
     /**
