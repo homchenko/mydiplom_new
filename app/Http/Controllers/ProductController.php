@@ -15,8 +15,17 @@ class ProductController extends Controller
      */
     public function index()
     {
+        //$request->user()->authorizeRoles(['employee', 'manager']);
         $categories = Category::all();
-        $products = Product::where('is_active', 1)->limit(4)->get();
+        $products = Product::all();
+        return view('products.index', compact('products', 'categories'));
+    }
+
+    public function main()
+    {
+        //$request->user()->authorizeRoles(['employee', 'manager']);
+        $categories = Category::all();
+        $products = Product::limit(4)->get();
         return view('front.main-page', compact('products', 'categories'));
     }
 
@@ -27,7 +36,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -38,7 +47,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Product::create($request->all());
+        return redirect(route('products.index'));
     }
 
     /**
@@ -49,7 +59,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $products = Product::where('is_active', 1)->get();
+        return view('products.index', compact('products'));
     }
 
     /**
@@ -60,7 +71,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -72,7 +84,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Product::find($id)->update($request->all());
+        return redirect(route('products.index'));
     }
 
     /**
@@ -83,6 +96,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //$request->user()->authorizeRoles('manager');
+        Product::find($id)->delete();
+
+        // редирект на список продуктов
+        return redirect(route('products.index'));
     }
 }

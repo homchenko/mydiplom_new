@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->decimal('old_price', 10, 2)->nullable();
             $table->decimal('price', 10, 2)->nullable();
             $table->string('fat');
-            $table->string('filler');
+            $table->string('filter');
 
             $table->tinyInteger('is_active')->default(0);
             $table->tinyInteger('is_new')->default(0);

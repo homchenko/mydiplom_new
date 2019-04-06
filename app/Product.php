@@ -15,7 +15,7 @@ class Product extends Model
         'old_price', 
         'price', 
         'fat',
-        'filler', 
+        'filter', 
         'is_active',
         'is_new',
         'is_hit',

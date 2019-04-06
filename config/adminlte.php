@@ -108,81 +108,41 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'ADMIN',
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
+            'text' => 'На главную',
+            'url'  => 'home/'
+        ],
+
+        /*[
+            'text'        => 'Виды мороженого',
             'icon'        => 'file',
-            'label'       => 4,
+            'label'       => 5,
             'label_color' => 'success',
-        ],
-        'ACCOUNT SETTINGS',
+        ],*/
+        
+        'ТОВАРЫ',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
+            'text'       => 'Изменить',
+            'icon_color' => 'green',
+            'url'         => 'home/products'
+
         ],
         [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        'LABELS',
-        [
-            'text'       => 'Important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'Warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'Information',
+            'text'       => 'Создать',
             'icon_color' => 'aqua',
+            'url'         => 'home/products/create'
         ],
+        /*[
+            'text'       => '-',
+            'icon_color' => 'red',
+        ],*/
     ],
 
     /*

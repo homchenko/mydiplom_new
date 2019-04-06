@@ -10,13 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'ProductController@index')->name('main.page');
+Route::get('/', 'ProductController@main')->name('main.page');
 Route::get('/catalog', 'CatalogController@catalog')->name('catalog.page');
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware'=>'auth', 'prefix'=>'home'], function (){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::resource('/products', 'ProductController');
+    // разрешаем методы для публичной части
+    //Route::resource('/home/posts', 'PostController')->except(['index', 'show']);
+});
 
 
 
-//Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
+
+
+
+
+
+
+
+
